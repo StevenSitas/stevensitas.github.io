@@ -7,7 +7,7 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="generator" content="HelpNDoc Professional Edition 6.9.0.577">
+  <meta name="generator" content="HelpNDoc Professional Edition 7.3.0.348">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" href="favicon.ico"/>
 
@@ -28,7 +28,7 @@
   <meta property="og:title" content="Sales Entities" />
   <meta property="og:type" content="article" />
   <meta property="og:description" content="" />
-  <meta property="og:site_name" content="alpha360 Docs" /> 
+  <meta property="og:site_name" content="alpha360 v3.3 - 351 documentation " /> 
 
   <!-- Bootstrap core CSS -->
   <link href="vendors/bootstrap-3.4.1/css/bootstrap.min.css" rel="stylesheet"/>
@@ -43,7 +43,7 @@
     <![endif]-->
 
   <!-- JsTree styles -->
-  <link href="vendors/jstree-3.3.7/themes/default/style.min.css" rel="stylesheet"/>
+  <link href="vendors/jstree-3.3.10/themes/default/style.min.css" rel="stylesheet"/>
 
   <!-- Hnd styles -->
   <link href="css/layout.min.css" rel="stylesheet" />
@@ -74,11 +74,11 @@
       <span class="sr-only">Toggle navigation</span>
       <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
     </button>
-    <h1>alpha360 Docs</h1>
+    <h1>alpha360 v3.3 - 351 documentation </h1>
     
   </header>
 
-  <nav class="md-nav-expanded">
+  <nav id="panel-left" class="md-nav-expanded">
     <!-- Nav tabs -->
     <ul class="tab-tabs nav nav-tabs" role="tablist">
       <li id="nav-close"> 
@@ -170,10 +170,10 @@
             
                 <div class="navigation">
                     <ol class="breadcrumb">
-                        <li><a href="UniversalDataModel.html">Universal Data Model</a></li>
+                        <li><a href="alpha360UniversalDataModel.html">alpha360 Universal Data Model</a></li>
                     </ol>
                     <div class="nav-arrows">
-                        <div class="btn-group btn-group-xs" role="group"><a class="btn btn-default" href="UniversalDataModel.html" title="Universal Data Model" role="button"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></a><a class="btn btn-default" href="BatchEntity.html" title="Batch Entity" role="button"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a><a class="btn btn-default" href="SalesQuote.html" title="Sales Quote" role="button"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></div>
+                        <div class="btn-group btn-group" role="group"><a class="btn btn-default" href="alpha360UniversalDataModel.html" title="alpha360 Universal Data Model" role="button"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></a><a class="btn btn-default" href="InventoryMovements.html" title="Inventory Movements" role="button"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a><a class="btn btn-default" href="SalesQuote.html" title="Sales Quote" role="button"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></div>
                     </div>
                 </div> 
             
@@ -184,65 +184,55 @@
 
             <div class="main-content">
                 
-<p></p>
-<p class="rvps2"><span class="rvts11">The Sales entities are a family of complex entities, used in the Sales area, to support Quotes, Orders, Shipments and Invoices.</span></p>
-<p class="rvps2"><span class="rvts11">At the heart of all Sales entities is the &nbsp;bBusinessDocument table.</span></p>
-<p class="rvps2"><span class="rvts11">Note: we use the Sales[Invoice] name for the bSales table</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps2"><span class="rvts11">The </span><span class="rvts12">Sales entities</span><span class="rvts11"> are a family of complex entities, used in the Sales area to support Sales Orders, Sales Shipments/Returns, Sales Invoices/Credit Invoices, AR Debits and AR Credits.</span></p>
+<p class="rvps2"><span class="rvts11">At the center of all Sales entities is the dbBusinessDocument table - that is why these entities are called </span><span class="rvts12">Sales Business Documents.</span></p>
 <p class="rvps2"><span class="rvts11"><br/></span></p>
-<p class="rvps2"><span class="rvts11">Here is a data diagram of the SalesOrder entity:</span></p>
+<p class="rvps2"><span class="rvts11">Note: We are using the name Sales in a "lose way" - it actually means all Sales Documents (Invoice, Orders, Shipments, Payments etc).</span></p>
+<p class="rvps2"><span class="rvts11">In some cultures( or languages) these words &nbsp;have a more strict meaning.</span></p>
 <p class="rvps2"><span class="rvts11"><br/></span></p>
-<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/SalesOrder.png"></p>
+<p class="rvps2"><span class="rvts11">Retail (or POS) entities are also included in the Sales entities.</span></p>
+<p class="rvps2"><span class="rvts11">The autonomous POS application has it own entities - see the relevant documentation ...</span></p>
 <p class="rvps2"><span class="rvts11"><br/></span></p>
-<p class="rvps2"><span class="rvts11">and here is a data diagram of the Sales[Invoice] entity:</span></p>
+<p class="rvps2"><span class="rvts12">Simple Diagram of the Sales Entities</span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/v3_3.png"></p>
 <p class="rvps2"><span class="rvts11"><br/></span></p>
-<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/Sales.png"></p>
+<p class="rvps2"><span class="rvts6">* the above diagram is NOT complete - for more information see the database schema.</span></p>
 <p class="rvps2"><span class="rvts11"><br/></span></p>
-<p class="rvps2"><span class="rvts11">As we can see from the above Diagrams, the SalesOrder entity is like the Sales[Invoice] entity,the only difference being &nbsp;the use of bSalesOrder table instead of bSales table.</span></p>
-<p class="rvps2"><span class="rvts12"><br/></span></p>
-<p class="rvps2"><span class="rvts11"><br/></span></p>
-<p class="rvps2"><span class="rvts11">​</span></p>
-<p class="rvps2"><span class="rvts11">Every REAL Business Document has one [and only one]&nbsp;record in the&nbsp;bBusinessDocument table and depending on&nbsp;the nature of the document, record(s) in the following tables:</span></p>
-<p class="rvps2"><span class="rvts11"><br/></span></p>
-<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 28px; list-style-position: outside; list-style-type: disc;">
-<li class="rvps2"><span class="rvts11">Sales Quotes: 1 record in the bSalesQuote table and one or more records in the bBusinessDocument_ProductLine tables [for the products]</span></li>
-<li class="rvps2"><span class="rvts11">Sales Orders: 1 record in the bSalesOrder table and one or&nbsp;more&nbsp;records in the bBusinessDocument_ProductLine tables [for the products]</span></li>
-<li class="rvps2"><span class="rvts11">Sales Shipments: 1 record in the bSalesShipment table and one or&nbsp;more&nbsp;records in the bBusinessDocument_ProductLine tables [for the products]</span></li>
-<li class="rvps2"><span class="rvts11">Sales Invoices: 1 record in the bSales table and one or&nbsp;more&nbsp;records in the bBusinessDocument_ProductLine tables [for the products]</span></li>
-<li class="rvps2"><span class="rvts11">Sales Payments: 1 record in the bSalesAR table&nbsp;and one or&nbsp;more&nbsp;records in the bBusinessDocument_PaymentLine tables [for the payments]</span></li>
+<p class="rvps2"><span class="rvts11">The main tables of the Sales entities are:</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+ <li class="rvps2"><span class="rvts12">SalesOrder entity</span><span class="rvts11"> -&gt; includes the tables </span><span class="rvts19">dbBusinessDocument</span><span class="rvts11">,</span><span class="rvts12"> </span><span class="rvts19">dbSalesOrder</span><span class="rvts11"> and </span><span class="rvts19">dbBusinessDocument_ProductLine.</span></li>
+ <li class="rvps2"><span class="rvts12">SalesShipment entity</span><span class="rvts11"> -&gt; includes the tables </span><span class="rvts19">dbBusinessDocument,</span><span class="rvts11"> </span><span class="rvts19">dbSalesShipment</span><span class="rvts11"> and </span><span class="rvts12">dbBusinessDocument_ProductLine</span><span class="rvts11">.</span></li>
+ <li class="rvps2"><span class="rvts12">Sales entity</span><span class="rvts11"> -&gt; includes the tables </span><span class="rvts19">dbBusinessDocument</span><span class="rvts11">, </span><span class="rvts19">dbSales</span><span class="rvts11"> and </span><span class="rvts19">dbBusinessDocument_ProductLine</span><span class="rvts11">.</span></li>
+ <li class="rvps2"><span class="rvts12">SalesAR entity</span><span class="rvts11"> -&gt; includes the tables </span><span class="rvts19">dbBusinessDocument</span><span class="rvts11"> and </span><span class="rvts19">dbSalesAR</span><span class="rvts11">.</span></li>
 </ul>
 <p class="rvps2"><span class="rvts11"><br/></span></p>
-<p class="rvps2"><span class="rvts11">​</span></p>
-<p class="rvps2"><span class="rvts11">There can also be one or&nbsp;more&nbsp;records [if it makes sense] in the following tables:</span></p>
-<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 28px; list-style-position: outside; list-style-type: disc;">
-<li class="rvps2"><span class="rvts11">bBusinessDocument_ExpenseLine tables [for the expenses]</span></li>
-<li class="rvps2"><span class="rvts11">bBusinessDocument_RevenueLine tables [for the revenues]</span></li>
-<li class="rvps2"><span class="rvts11">bBusinessDocument_TAXLine tables [for the taxes]</span></li>
-</ul>
-<p class="rvps2"><span class="rvts11">​</span></p>
-<p class="rvps2"><span class="rvts11">These tables create a "star structure" connected by PKs and FKs.</span></p>
-<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 28px; list-style-position: outside; list-style-type: disc;">
-<li class="rvps2"><span class="rvts11">bBusinessDocument.sBusinessDocumentPK is the PK of the bBusinessDocument table.</span></li>
-<li class="rvps2"><span class="rvts11">*.sBusinessDocumentFK are the FKs of the other connected tables.</span></li>
-<li class="rvps2"><span class="rvts11">Some of the above FKs are also used as PK in their table [like bSalesAR.sBusinessDocumentFK is the PK of the table bSalesAR..</span></li>
-</ul>
-<p class="rvps2"><span class="rvts11">​</span></p>
-<p class="rvps2"><span class="rvts11">​</span></p>
-<p class="rvps2"><span class="rvts11">"Around" the tables of this entity, are various Dimension tables [like gSalesTerms], connected by FKs.</span></p>
-<p class="rvps2"><span class="rvts11">You can find more information about the entity in the WX Analysis.</span></p>
+<p class="rvps2"><span class="rvts11">Depending on the implementation and local laws, the above, may be extended ...</span></p>
+<p class="rvps2"><span class="rvts11">&nbsp;</span></p>
+<p class="rvps2"><span class="rvts11">The </span><span class="rvts12">dbBusinessDocument table</span><span class="rvts11"> includes information about the Type of Document, the TransactionDate, the Numbering etc, fields that are common to all the Sales entities.</span></p>
+<p class="rvps2"><span class="rvts11">Every dbBusinessDocument is linked to a </span><span class="rvts12">dbBusinesObject</span><span class="rvts11"> record that is linked to a fixed </span><span class="rvts12">dbSystemObject</span><span class="rvts11"> record.</span></p>
+<p class="rvps2"><span class="rvts11">The dbSystemObject controls the transactions a Sales entity posts and dbBusinessObjects controls the remaining dbBusinessDocuments "behavior" - like the type of systemObject, &nbsp;Print forms, numbering etc</span></p>
 <p class="rvps2"><span class="rvts11"><br/></span></p>
-<p class="rvps2"><span class="rvts11">Physical tables used in Sales:</span></p>
-<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 28px; list-style-position: outside; list-style-type: disc;">
-<li class="rvps2"><span class="rvts11">Sales Quotes -&gt; bSalesQuote</span></li>
-<li class="rvps2"><span class="rvts11">Sales Orders -&gt; bSalesOrder</span></li>
-<li class="rvps2"><span class="rvts11">Sales Shipments -&gt; bSalesShipment</span></li>
-<li class="rvps2"><span class="rvts11">Sales Invoices -&gt; bSales</span></li>
-<li class="rvps2"><span class="rvts11">Sales Payments -&gt; bSalesAR</span></li>
+<p class="rvps2"><span class="rvts11">Important notes:</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+ <li class="rvps2"><span class="rvts11">dbSalesOrder, dbSalesShipment, dbSales and dbSaleAR include the field </span><span class="rvts12">nBusinessDocumentPK</span><span class="rvts11"> that is a PK and a FK to dbBusinessDocument.</span></li>
+ <li class="rvps2"><span class="rvts11">The </span><span class="rvts12">nPartyFK</span><span class="rvts11"> is in dbSalesOrder, dbSalesShipment, dbSales and dbSalesAR &nbsp;tables AND not in the dbBusinessDocument table.</span></li>
+ <li class="rvps2"><span class="rvts12">dbBusinessDocument_ProductLine</span><span class="rvts11"> is linked to the dbBusinessDocument table and contains the </span><span class="rvts12">Products</span><span class="rvts11"> of a SalesOrder, SalesShipment or a SalesInvoice.</span></li>
 </ul>
-<p></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Although the database model supports Products even in a AR transaction (!!!), there is no supporting UI for the above.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11">All Sales entities are </span><span class="rvts12">automatically posted </span><span class="rvts11">and </span><span class="rvts12">create various transaction entries</span><span class="rvts11"> as soon as they are added to the Database.</span></p>
+<p class="rvps2"><span class="rvts11">This is different from what happened in previous versions where adding and posting where 2 different steps and 2 different calls from local procedures.</span></p>
+<p class="rvps2"><span class="rvts11">You still can "emulate" the old 2 step process by removing the call to posts from the main add procedures ...</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11">* Note that </span><span class="rvts12">SystemObjects</span><span class="rvts11"> are the most important part of the alpha360 apps and control the behavior of the apps.</span></p>
+<p class="rvps2" style="page-break-before: always;"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11"></span><span class="rvts6"></span></p>
 
             </div>
             
-            <div id="topic_footer"><div id="topic_footer_content">Copyright &copy; 2020 by computerplus. All Rights Reserved.</div></div>
+            <div id="topic_footer"><div id="topic_footer_content">Copyright &copy; 2023 by computerplus. All Rights Reserved.</div></div>
         </div>  <!-- /#topic-content -->
     </article>
 
@@ -269,29 +259,28 @@
     </div>
   </div>
 
-  <!-- Scripts -->
-  <script src="vendors/jquery-3.4.1/jquery.min.js"></script>
-  <script src="vendors/bootstrap-3.4.1/js/bootstrap.min.js"></script>
-  <script src="vendors/markjs-8.11.1/jquery.mark.min.js"></script>
-  <script src="vendors/uri-1.19.1/uri.min.js"></script>
-  <script src="vendors/imageMapResizer-1.0.7/imageMapResizer.min.js"></script>
-  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-  <script src="vendors/bootstrap-3.4.1/js/ie10-viewport-bug-workaround.js"></script>
-  
-  <!-- Headroom -->
-  <script src="vendors/headroom-0.9.4/headroom.min.js"></script>
-  <script src="vendors/headroom-0.9.4/jquery.headroom.min.js"></script>
+  <!-- Splitter -->
+  <div id="hnd-splitter" style="left: 350px"></div>  
 
-  <!-- JsTree -->
-  <script src="vendors/jstree-3.3.7/jstree.min.js"></script>
+  <!-- Scripts -->
+  <script src="vendors/jquery-3.5.1/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+  <script src="vendors/bootstrap-3.4.1/js/ie10-viewport-bug-workaround.js"></script>
+  <script src="vendors/markjs-8.11.1/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.19.2/uri.min.js"></script>
+  <script src="vendors/imageMapResizer-1.0.10/imageMapResizer.min.js"></script>
+  <script src="vendors/headroom-0.11.0/headroom.min.js"></script>
+  <script src="vendors/jstree-3.3.10/jstree.min.js"></script>  
+  <script src="vendors/interactjs-1.9.22/interact.min.js"></script>  
 
   <!-- HelpNDoc scripts -->
+  <script src="js/polyfill.object.min.js"></script>
   <script src="_translations.js"></script>
   <script src="js/hndsd.min.js"></script>
   <script src="js/hndse.min.js"></script>
   <script src="js/app.min.js"></script>
 
-  <!-- Scripts -->
+  <!-- Init script -->
   <script>
     $(function() {
       // Create the app

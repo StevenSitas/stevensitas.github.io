@@ -7,7 +7,7 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="generator" content="HelpNDoc Professional Edition 6.9.0.577">
+  <meta name="generator" content="HelpNDoc Professional Edition 7.3.0.348">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" href="favicon.ico"/>
 
@@ -28,7 +28,7 @@
   <meta property="og:title" content="Product Entity" />
   <meta property="og:type" content="article" />
   <meta property="og:description" content="" />
-  <meta property="og:site_name" content="alpha360 Docs" /> 
+  <meta property="og:site_name" content="alpha360 v3.3 - 351 documentation " /> 
 
   <!-- Bootstrap core CSS -->
   <link href="vendors/bootstrap-3.4.1/css/bootstrap.min.css" rel="stylesheet"/>
@@ -43,7 +43,7 @@
     <![endif]-->
 
   <!-- JsTree styles -->
-  <link href="vendors/jstree-3.3.7/themes/default/style.min.css" rel="stylesheet"/>
+  <link href="vendors/jstree-3.3.10/themes/default/style.min.css" rel="stylesheet"/>
 
   <!-- Hnd styles -->
   <link href="css/layout.min.css" rel="stylesheet" />
@@ -74,11 +74,11 @@
       <span class="sr-only">Toggle navigation</span>
       <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
     </button>
-    <h1>alpha360 Docs</h1>
+    <h1>alpha360 v3.3 - 351 documentation </h1>
     
   </header>
 
-  <nav class="md-nav-expanded">
+  <nav id="panel-left" class="md-nav-expanded">
     <!-- Nav tabs -->
     <ul class="tab-tabs nav nav-tabs" role="tablist">
       <li id="nav-close"> 
@@ -170,10 +170,10 @@
             
                 <div class="navigation">
                     <ol class="breadcrumb">
-                        <li><a href="UniversalDataModel.html">Universal Data Model</a></li>
+                        <li><a href="alpha360UniversalDataModel.html">alpha360 Universal Data Model</a></li>
                     </ol>
                     <div class="nav-arrows">
-                        <div class="btn-group btn-group-xs" role="group"><a class="btn btn-default" href="UniversalDataModel.html" title="Universal Data Model" role="button"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></a><a class="btn btn-default" href="PartyEntity.html" title="Party Entity" role="button"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a><a class="btn btn-default" href="CRMEntities.html" title="CRM Entities" role="button"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></div>
+                        <div class="btn-group btn-group" role="group"><a class="btn btn-default" href="alpha360UniversalDataModel.html" title="alpha360 Universal Data Model" role="button"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></a><a class="btn btn-default" href="PartyEntity.html" title="Party Entity" role="button"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a><a class="btn btn-default" href="CRMEntities.html" title="CRM Entities" role="button"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></div>
                     </div>
                 </div> 
             
@@ -184,28 +184,40 @@
 
             <div class="main-content">
                 
-<p></p>
-<p class="rvps2"><span class="rvts11">The Product&nbsp;entity is a complex entity, used to support Products, Merchandise, Services and their variations in a unified way.</span></p>
-<p class="rvps2"><span class="rvts11">At the "heart" of the entity is the gProduct table [not to be confused with the Product entity].</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps2"><span class="rvts11">The </span><span class="rvts12">Product&nbsp;entity</span><span class="rvts11"> is a complex foundation entity, used to support Products, Merchandise, Services and their variations in a unified way.</span></p>
+<p class="rvps2"><span class="rvts11">At the "heart" of the entity is the dbProduct table &nbsp;- not to be confused with the Product Entity.</span></p>
 <p class="rvps2"><span class="rvts11"><br/></span></p>
-<p class="rvps2"><span class="rvts11">Every product has one [and only one] record in the gProduct table.</span></p>
-<p class="rvps2"><span class="rvts11">gProduct.sPartyPK is the PK of the gProduct table.</span></p>
-<p class="rvps2"><span class="rvts11">​</span></p>
-<p class="rvps2"><span class="rvts11">"Around" the tables of this entity, are various Dimension tables [like gUOM, gProductCategory etc], connected by FKs.</span></p>
-<p class="rvps2"><span class="rvts11">You can find more information about the entity in the WX Analysis [or the SQL Schema].</span></p>
+<p class="rvps2"><span class="rvts11">Every product has one [and only one] record in the dbProduct table.</span></p>
 <p class="rvps2"><span class="rvts11"><br/></span></p>
-<p class="rvps2"><span class="rvts11">Note: v2.11 - </span><span class="rvts16">Removed gProduct_Class table and moved the fields to the gProduct table.</span></p>
-<p class="rvps2"><span class="rvts16"><br/></span></p>
-<p class="rvps2"><span class="rvts16"><br/></span></p>
-<p class="rvps2"><span class="rvts12">Diagram</span></p>
-<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/Product1.png"></p>
-<p class="rvps2"><span class="rvts15"><br/></span></p>
-<p class="rvps2"><span class="rvts15"><br/></span></p>
-<p></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 28px; list-style-position: outside; list-style-type: disc;">
+ <li class="rvps2"><span class="rvts11">dbProduct.nProductPK is the PK of the dbProduct table - it is an 8 byte int [auto],</span></li>
+ <li class="rvps2"><span class="rvts11">all other fields are self explanatory or are documented in their functional area.</span></li>
+</ul>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Note: We are using the name Product in a "lose way".</span></p>
+<p class="rvps2"><span class="rvts11">In some cultures( or languages) the word Product has a more strict meaning.</span></p>
+<p class="rvps2"><span class="rvts11">Here it can be a Merchandise or a Item that we Produce or even a Service that we sell or buy.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11">"Around" this entity, are various Dimension tables - like dbProductCategory - connected by FKs, with or without RI constraints.</span></p>
+<p class="rvps2"><span class="rvts11">You can find more information about this entity in the WX Analysis [or the SQL Schema].</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11">* Not using RI Constraints, for some "virtual links," gives a programmer a lot of flexibility - especially in the Query Editor,</span></p>
+<p class="rvps2"><span class="rvts11">But a RI constraint must then be implemented in code ..</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11">*Paradigm of Virtual link and RI</span></p>
+<p class="rvps2"><span class="rvts11">If you Delete a dbProduct record you must delete, with code, any "linked" dbProduct_Photos.</span></p>
+<p class="rvps2"><span class="rvts11">Additions and Edits are not affected.&nbsp;</span></p>
+<p class="rvps2"><span class="rvts11">&nbsp;</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts12">Simple Diagram of Product Entity</span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/v3_2.png"></p>
+<p class="rvps2"><span class="rvts6">* the above diagram is NOT complete - for more information see the database schema.</span></p>
+<p class="rvps2" style="page-break-before: always;"><span class="rvts6"></span><span class="rvts6"></span></p>
 
             </div>
             
-            <div id="topic_footer"><div id="topic_footer_content">Copyright &copy; 2020 by computerplus. All Rights Reserved.</div></div>
+            <div id="topic_footer"><div id="topic_footer_content">Copyright &copy; 2023 by computerplus. All Rights Reserved.</div></div>
         </div>  <!-- /#topic-content -->
     </article>
 
@@ -232,29 +244,28 @@
     </div>
   </div>
 
-  <!-- Scripts -->
-  <script src="vendors/jquery-3.4.1/jquery.min.js"></script>
-  <script src="vendors/bootstrap-3.4.1/js/bootstrap.min.js"></script>
-  <script src="vendors/markjs-8.11.1/jquery.mark.min.js"></script>
-  <script src="vendors/uri-1.19.1/uri.min.js"></script>
-  <script src="vendors/imageMapResizer-1.0.7/imageMapResizer.min.js"></script>
-  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-  <script src="vendors/bootstrap-3.4.1/js/ie10-viewport-bug-workaround.js"></script>
-  
-  <!-- Headroom -->
-  <script src="vendors/headroom-0.9.4/headroom.min.js"></script>
-  <script src="vendors/headroom-0.9.4/jquery.headroom.min.js"></script>
+  <!-- Splitter -->
+  <div id="hnd-splitter" style="left: 350px"></div>  
 
-  <!-- JsTree -->
-  <script src="vendors/jstree-3.3.7/jstree.min.js"></script>
+  <!-- Scripts -->
+  <script src="vendors/jquery-3.5.1/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+  <script src="vendors/bootstrap-3.4.1/js/ie10-viewport-bug-workaround.js"></script>
+  <script src="vendors/markjs-8.11.1/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.19.2/uri.min.js"></script>
+  <script src="vendors/imageMapResizer-1.0.10/imageMapResizer.min.js"></script>
+  <script src="vendors/headroom-0.11.0/headroom.min.js"></script>
+  <script src="vendors/jstree-3.3.10/jstree.min.js"></script>  
+  <script src="vendors/interactjs-1.9.22/interact.min.js"></script>  
 
   <!-- HelpNDoc scripts -->
+  <script src="js/polyfill.object.min.js"></script>
   <script src="_translations.js"></script>
   <script src="js/hndsd.min.js"></script>
   <script src="js/hndse.min.js"></script>
   <script src="js/app.min.js"></script>
 
-  <!-- Scripts -->
+  <!-- Init script -->
   <script>
     $(function() {
       // Create the app

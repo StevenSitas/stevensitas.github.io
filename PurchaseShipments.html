@@ -7,7 +7,7 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="generator" content="HelpNDoc Professional Edition 6.9.0.577">
+  <meta name="generator" content="HelpNDoc Professional Edition 7.3.0.348">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" href="favicon.ico"/>
 
@@ -28,7 +28,7 @@
   <meta property="og:title" content="Purchase Shipments" />
   <meta property="og:type" content="article" />
   <meta property="og:description" content="" />
-  <meta property="og:site_name" content="alpha360 Docs" /> 
+  <meta property="og:site_name" content="alpha360 v3.3 - 351 documentation " /> 
 
   <!-- Bootstrap core CSS -->
   <link href="vendors/bootstrap-3.4.1/css/bootstrap.min.css" rel="stylesheet"/>
@@ -43,7 +43,7 @@
     <![endif]-->
 
   <!-- JsTree styles -->
-  <link href="vendors/jstree-3.3.7/themes/default/style.min.css" rel="stylesheet"/>
+  <link href="vendors/jstree-3.3.10/themes/default/style.min.css" rel="stylesheet"/>
 
   <!-- Hnd styles -->
   <link href="css/layout.min.css" rel="stylesheet" />
@@ -74,11 +74,11 @@
       <span class="sr-only">Toggle navigation</span>
       <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
     </button>
-    <h1>alpha360 Docs</h1>
+    <h1>alpha360 v3.3 - 351 documentation </h1>
     
   </header>
 
-  <nav class="md-nav-expanded">
+  <nav id="panel-left" class="md-nav-expanded">
     <!-- Nav tabs -->
     <ul class="tab-tabs nav nav-tabs" role="tablist">
       <li id="nav-close"> 
@@ -170,10 +170,10 @@
             
                 <div class="navigation">
                     <ol class="breadcrumb">
-                        <li><a href="UniversalDataModel.html">Universal Data Model</a></li><li><a href="PurchaseEntities.html">Purchase Entities</a></li>
+                        <li><a href="alpha360UniversalDataModel.html">alpha360 Universal Data Model</a></li><li><a href="PurchaseEntities.html">Purchase Entities</a></li>
                     </ol>
                     <div class="nav-arrows">
-                        <div class="btn-group btn-group-xs" role="group"><a class="btn btn-default" href="PurchaseEntities.html" title="Purchase Entities" role="button"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></a><a class="btn btn-default" href="PurchaseOrder.html" title="Purchase Order" role="button"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a><a class="btn btn-default" href="PurchaseInvoice.html" title="Purchase Invoice" role="button"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></div>
+                        <div class="btn-group btn-group" role="group"><a class="btn btn-default" href="PurchaseEntities.html" title="Purchase Entities" role="button"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></a><a class="btn btn-default" href="PurchaseOrder.html" title="Purchase Order" role="button"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a><a class="btn btn-default" href="Purchases.html" title="Purchases" role="button"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></div>
                     </div>
                 </div> 
             
@@ -184,35 +184,40 @@
 
             <div class="main-content">
                 
-<p></p>
-<p class="rvps2"><span class="rvts11">Every PurchaseShipment entity is represented by 2 tables: </span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11">The </span><span class="rvts12">PurchaseShipment entity</span><span class="rvts11"> is a complex document entity, used to support Purchase Shipments (and Returns).</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts12">Simple Diagram of the&nbsp;</span><span class="rvts11"> </span><span class="rvts12">PurchaseShipment Entity</span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/v3_45.png"></p>
+<p class="rvps2"><span class="rvts6">* the above diagram is NOT complete - for more information see the database schema</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Tables of the PurchaseShipment entity:</span></p>
 <ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
-<li class="rvps2"><span class="rvts11">the bBusinessDocument table that has fields [or information] common for all Sales and Purchase documents, like TransactionDate, Numbering, Posting, Currency etc.</span></li>
+ <li class="rvps2"><span class="rvts12">PurchaseShipment entity</span><span class="rvts11"> -&gt; includes the tables </span><span class="rvts19">dbBusinessDocument</span><span class="rvts11">,</span><span class="rvts12"> </span><span class="rvts19">dbPurchaseShipment</span><span class="rvts11"> and </span><span class="rvts19">dbBusinessDocument_ProductLine</span></li>
 </ul>
-<p class="rvps2"><span class="rvts11">Every bBusinessDocument table has a field named sBusinessObjectFK_PST, that relates it to a record from the bBusinessObject table.</span></p>
-<p class="rvps2"><span class="rvts11">This record controls printing forms, online posting etc and through the bBusinessObject.nBusinessObjectRole field the type of transaction(s) created when we post the PurchaseShipment &nbsp;Object. For Reporting issues, the bBusinessObject.nBusinessObjectRole field is also assigned to the bBusinessDocument.nBusinessObjectRole_PST field.</span></p>
+<p class="rvps2"><span class="rvts19"><br/></span></p>
+<p class="rvps2"><span class="rvts11">The </span><span class="rvts12">dbBusinessDocument table</span><span class="rvts11"> includes information about the type of Document, the transactionDate, the numbering etc, fields that are common to all the Purchase entities.</span></p>
+<p class="rvps2"><span class="rvts11">Every dbBusinessDocument is linked to a </span><span class="rvts12">dbBusinesObject</span><span class="rvts11"> record that is linked to a fixed </span><span class="rvts12">dbSystemObject</span><span class="rvts11"> record.</span></p>
+<p class="rvps2"><span class="rvts11">The dbSystemObject defines the transactions a Purchase entity posts and dbBusinessObjects controls the remaining dbBusinessDocuments "behavior" - like the type of systemObject, &nbsp;print forms, numbering etc</span></p>
 <p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Important notes:</span></p>
 <ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
-<li class="rvps2"><span class="rvts11">the bPurchaseShipment table that has fields [or information] specific to PurchaseShipment , like Party, Party Branch etc.</span></li>
+ <li class="rvps2"><span class="rvts11">dbPurchaseShipment includes the field </span><span class="rvts12">nBusinessDocumentPK</span><span class="rvts11"> that is</span><span class="rvts12"> its PK and its FK for the link with dbBusinessDocument,</span></li>
+ <li class="rvps2"><span class="rvts11">the </span><span class="rvts12">nPartyFK</span><span class="rvts11"> is in the dbPurchaseShipment table AND not in the dbBusinessDocument table,</span></li>
+ <li class="rvps2"><span class="rvts12">dbBusinessDocument_ProductLine</span><span class="rvts11"> is linked to the dbBusinessDocument table and contains the </span><span class="rvts12">Products</span><span class="rvts11"> of the PurchaseShipment,</span></li>
+ <li class="rvps2"><span class="rvts11">the tables that supported VAT in previous releases have been removed.</span></li>
 </ul>
 <p class="rvps2"><span class="rvts11"><br/></span></p>
-<p class="rvps2"><span class="rvts11">the 2 tables above have a 1 to 1 relation through the use of bBusinessDocument.sBusinessDocumentPK and bPurchaseShipment.sBusinessDocumentFK fields - one [and only one] bBusinessDocument record for every bPurchaseShipment record is created.</span></p>
-<p class="rvps2"><span class="rvts11">Note that bPurchaseShipment.sBusinessDocumentFK is both a PK and a FK (to a bBusinessDocument record).</span></p>
+<p class="rvps2"><span class="rvts11">All PurchaseShipment entities are </span><span class="rvts12">automatically posted </span><span class="rvts11">and </span><span class="rvts12">various transaction entries are created</span><span class="rvts11"> as soon as the PurchaseShipment entities are</span><span class="rvts12"> added</span><span class="rvts11"> to the Database.</span></p>
+<p class="rvps2"><span class="rvts11">This is different from what happened in previous versions where adding and posting where 2 different steps and 2 different calls from local procedures.</span></p>
+<p class="rvps2"><span class="rvts11">You still can "emulate" the old 2 step process by removing the call to posts from the main add procedures ...</span></p>
 <p class="rvps2"><span class="rvts11"><br/></span></p>
-<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
-<li class="rvps2"><span class="rvts11">To handle the Products [and Services] of a PurchaseShipment we use the table: bBusinessDocument_ProductLine</span></li>
-<li class="rvps2"><span class="rvts11">To handle the Expenses of a PurchaseShipment we use the table: bBusinessDocument_ExpenseLine</span></li>
-<li class="rvps2"><span class="rvts11">To handle the TAXEs of a PurchaseShipment we use the table: bBusinessDocument_TAXLine</span></li>
-</ul>
-<p class="rvps2"><span class="rvts11">Just Note that these tables are related to the bBusinessDocument table and not the bPurchaseShipment table.</span></p>
-<p class="rvps2"><span class="rvts11"><br/></span></p>
-<p class="rvps2"><span class="rvts11">"Around" the tables of this entity, are various Dimension tables [like gSalesTerms], connected by FKs.</span></p>
-<p class="rvps2"><span class="rvts11">You can find more information about the entity in the WX Analysis [or the SQL Schema].</span></p>
-<p></p>
+<p class="rvps2"><span class="rvts11">* Note that </span><span class="rvts12">SystemObjects</span><span class="rvts11"> are the most important part of the alpha360 apps and control the behavior of the apps.</span></p>
+<p class="rvps2" style="page-break-before: always;"><span class="rvts11"></span><span class="rvts6"></span></p>
 
             </div>
             
-            <div id="topic_footer"><div id="topic_footer_content">Copyright &copy; 2020 by computerplus. All Rights Reserved.</div></div>
+            <div id="topic_footer"><div id="topic_footer_content">Copyright &copy; 2023 by computerplus. All Rights Reserved.</div></div>
         </div>  <!-- /#topic-content -->
     </article>
 
@@ -239,29 +244,28 @@
     </div>
   </div>
 
-  <!-- Scripts -->
-  <script src="vendors/jquery-3.4.1/jquery.min.js"></script>
-  <script src="vendors/bootstrap-3.4.1/js/bootstrap.min.js"></script>
-  <script src="vendors/markjs-8.11.1/jquery.mark.min.js"></script>
-  <script src="vendors/uri-1.19.1/uri.min.js"></script>
-  <script src="vendors/imageMapResizer-1.0.7/imageMapResizer.min.js"></script>
-  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-  <script src="vendors/bootstrap-3.4.1/js/ie10-viewport-bug-workaround.js"></script>
-  
-  <!-- Headroom -->
-  <script src="vendors/headroom-0.9.4/headroom.min.js"></script>
-  <script src="vendors/headroom-0.9.4/jquery.headroom.min.js"></script>
+  <!-- Splitter -->
+  <div id="hnd-splitter" style="left: 350px"></div>  
 
-  <!-- JsTree -->
-  <script src="vendors/jstree-3.3.7/jstree.min.js"></script>
+  <!-- Scripts -->
+  <script src="vendors/jquery-3.5.1/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+  <script src="vendors/bootstrap-3.4.1/js/ie10-viewport-bug-workaround.js"></script>
+  <script src="vendors/markjs-8.11.1/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.19.2/uri.min.js"></script>
+  <script src="vendors/imageMapResizer-1.0.10/imageMapResizer.min.js"></script>
+  <script src="vendors/headroom-0.11.0/headroom.min.js"></script>
+  <script src="vendors/jstree-3.3.10/jstree.min.js"></script>  
+  <script src="vendors/interactjs-1.9.22/interact.min.js"></script>  
 
   <!-- HelpNDoc scripts -->
+  <script src="js/polyfill.object.min.js"></script>
   <script src="_translations.js"></script>
   <script src="js/hndsd.min.js"></script>
   <script src="js/hndse.min.js"></script>
   <script src="js/app.min.js"></script>
 
-  <!-- Scripts -->
+  <!-- Init script -->
   <script>
     $(function() {
       // Create the app

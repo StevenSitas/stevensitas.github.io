@@ -7,7 +7,7 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="generator" content="HelpNDoc Professional Edition 6.9.0.577">
+  <meta name="generator" content="HelpNDoc Professional Edition 7.3.0.348">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" href="favicon.ico"/>
 
@@ -28,7 +28,7 @@
   <meta property="og:title" content="Business Objects" />
   <meta property="og:type" content="article" />
   <meta property="og:description" content="" />
-  <meta property="og:site_name" content="alpha360 Docs" /> 
+  <meta property="og:site_name" content="alpha360 v3.3 - 351 documentation " /> 
 
   <!-- Bootstrap core CSS -->
   <link href="vendors/bootstrap-3.4.1/css/bootstrap.min.css" rel="stylesheet"/>
@@ -43,7 +43,7 @@
     <![endif]-->
 
   <!-- JsTree styles -->
-  <link href="vendors/jstree-3.3.7/themes/default/style.min.css" rel="stylesheet"/>
+  <link href="vendors/jstree-3.3.10/themes/default/style.min.css" rel="stylesheet"/>
 
   <!-- Hnd styles -->
   <link href="css/layout.min.css" rel="stylesheet" />
@@ -74,11 +74,11 @@
       <span class="sr-only">Toggle navigation</span>
       <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
     </button>
-    <h1>alpha360 Docs</h1>
+    <h1>alpha360 v3.3 - 351 documentation </h1>
     
   </header>
 
-  <nav class="md-nav-expanded">
+  <nav id="panel-left" class="md-nav-expanded">
     <!-- Nav tabs -->
     <ul class="tab-tabs nav nav-tabs" role="tablist">
       <li id="nav-close"> 
@@ -164,16 +164,16 @@
     <article>
         <div id="topic-content" class="container-fluid" 
 		  data-hnd-id="BusinessObjects"
-		  data-hnd-context="47"
+		  data-hnd-context="36"
 		  data-hnd-title="Business Objects"
 		>
             
                 <div class="navigation">
                     <ol class="breadcrumb">
-                        <li><a href="alpha360BusinessApplicationsWLve.html">alpha360 Business Applications [WL versions]</a></li><li><a href="Setupthealpha360System.html">Setup the alpha360 System</a></li><li><a href="GeneralDimensions.html">General Dimensions</a></li>
+                        <li><a href="Usingalpha360WINDEVerpBusinessap.html">Using alpha360 WINDEV erp Business applications</a></li><li><a href="Setup.html">Setup</a></li><li><a href="Dimensions.html">Dimensions</a></li>
                     </ol>
                     <div class="nav-arrows">
-                        <div class="btn-group btn-group-xs" role="group"><a class="btn btn-default" href="GeneralDimensions.html" title="General Dimensions" role="button"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></a><a class="btn btn-default" href="Departments.html" title="Departments" role="button"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a><a class="btn btn-default" href="PaymentBooks.html" title="Payment Books" role="button"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></div>
+                        <div class="btn-group btn-group" role="group"><a class="btn btn-default" href="Dimensions.html" title="Dimensions" role="button"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></a><a class="btn btn-default" href="UnderstandingDimensions.html" title="Understanding Dimensions" role="button"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a><a class="btn btn-default" href="SystemObjects.html" title="System Objects" role="button"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></div>
                     </div>
                 </div> 
             
@@ -184,22 +184,30 @@
 
             <div class="main-content">
                 
-<p></p>
-<p class="rvps2"><span class="rvts17">Every Business Document in the alpha360 projects is linked to one [and only one] Business Object - the only exception being the Accounting Batches.</span></p>
-<p class="rvps2"><span class="rvts17">In the Area drop down [at the bottom of the window] select Sales and from the list above [Object Roles] select Sales Invoice+Shipment.</span></p>
-<p class="rvps2"><span class="rvts17">Click the &lt;+&gt; button to create a business Object of type Sales+Shipment - Business Documents of this type, when posted, create inventory transactions [with quantity and amounts] and party transactions [with Debit/credit amounts]. The Business Object also controls numbering, posting and printing of the Business Documents.</span></p>
-<p class="rvps2"><span class="rvts17"><br/></span></p>
-<p class="rvps2"><img width="935" height="511" alt="" style="padding : 1px;" src="lib/dimensions2.png"></p>
-<p class="rvps2"><span class="rvts17"><br/></span></p>
-<p class="rvps2"><span class="rvts17"><br/></span></p>
-<p class="rvps2"><img width="931" height="522" alt="" style="padding : 1px;" src="lib/dimensions3.png"></p>
-<p class="rvps2"><span class="rvts17"><br/></span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p></p>
+<p class="rvps2"><span class="rvts36">In alpha360 Business apps, every data entity that creates (or posts) entries in the various transaction tables, is a </span><span class="rvts37">Business Document</span><span class="rvts36">.</span></p>
+<p class="rvps2"><span class="rvts36">Business Documents always have one (and only one) entry in the dbBusinessDocument table.</span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps2"><span class="rvts36">Every Business Document is a</span><span class="rvts37"> type of Business Object</span><span class="rvts36"> - created by the alpha360 users.</span></p>
+<p class="rvps2"><span class="rvts36">Business Objects control everything a Business Document does - what it posts, how is it numbered, where is it printed, etc ..</span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps2"><span class="rvts36">Because every Business Object is a type of </span><span class="rvts37">System Object</span><span class="rvts36">, Business Objects play the most important role in the Business apps.</span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps2"><span class="rvts36">For Business Objects, due to their complexity, we use a alpha360 form - to add, edit or delete - instead of a UI table.</span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps2"><span class="rvts20">Business Objects UI</span></p>
+<p class="rvps2"><img width="820" height="438" alt="" style="padding : 1px;" src="lib/d2.png"></p>
+<p class="rvps2"><span class="rvts33"><br/></span></p>
+<p class="rvps2"><span class="rvts12">Simple Diagram of the BusinessObject Entity</span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/d1.png"></p>
+<p class="rvps2"><span class="rvts33"><br/></span></p>
+<p class="rvps2"><span class="rvts6">* the above diagram is NOT complete - for more information see the database schema.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2" style="page-break-before: always;"><span class="rvts6"></span><span class="rvts6"></span></p>
 
             </div>
             
-            <div id="topic_footer"><div id="topic_footer_content">Copyright &copy; 2020 by computerplus. All Rights Reserved.</div></div>
+            <div id="topic_footer"><div id="topic_footer_content">Copyright &copy; 2023 by computerplus. All Rights Reserved.</div></div>
         </div>  <!-- /#topic-content -->
     </article>
 
@@ -226,29 +234,28 @@
     </div>
   </div>
 
-  <!-- Scripts -->
-  <script src="vendors/jquery-3.4.1/jquery.min.js"></script>
-  <script src="vendors/bootstrap-3.4.1/js/bootstrap.min.js"></script>
-  <script src="vendors/markjs-8.11.1/jquery.mark.min.js"></script>
-  <script src="vendors/uri-1.19.1/uri.min.js"></script>
-  <script src="vendors/imageMapResizer-1.0.7/imageMapResizer.min.js"></script>
-  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-  <script src="vendors/bootstrap-3.4.1/js/ie10-viewport-bug-workaround.js"></script>
-  
-  <!-- Headroom -->
-  <script src="vendors/headroom-0.9.4/headroom.min.js"></script>
-  <script src="vendors/headroom-0.9.4/jquery.headroom.min.js"></script>
+  <!-- Splitter -->
+  <div id="hnd-splitter" style="left: 350px"></div>  
 
-  <!-- JsTree -->
-  <script src="vendors/jstree-3.3.7/jstree.min.js"></script>
+  <!-- Scripts -->
+  <script src="vendors/jquery-3.5.1/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+  <script src="vendors/bootstrap-3.4.1/js/ie10-viewport-bug-workaround.js"></script>
+  <script src="vendors/markjs-8.11.1/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.19.2/uri.min.js"></script>
+  <script src="vendors/imageMapResizer-1.0.10/imageMapResizer.min.js"></script>
+  <script src="vendors/headroom-0.11.0/headroom.min.js"></script>
+  <script src="vendors/jstree-3.3.10/jstree.min.js"></script>  
+  <script src="vendors/interactjs-1.9.22/interact.min.js"></script>  
 
   <!-- HelpNDoc scripts -->
+  <script src="js/polyfill.object.min.js"></script>
   <script src="_translations.js"></script>
   <script src="js/hndsd.min.js"></script>
   <script src="js/hndse.min.js"></script>
   <script src="js/app.min.js"></script>
 
-  <!-- Scripts -->
+  <!-- Init script -->
   <script>
     $(function() {
       // Create the app

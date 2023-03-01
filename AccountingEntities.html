@@ -7,7 +7,7 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="generator" content="HelpNDoc Professional Edition 6.9.0.577">
+  <meta name="generator" content="HelpNDoc Professional Edition 7.3.0.348">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" href="favicon.ico"/>
 
@@ -28,7 +28,7 @@
   <meta property="og:title" content="Accounting Entities" />
   <meta property="og:type" content="article" />
   <meta property="og:description" content="" />
-  <meta property="og:site_name" content="alpha360 Docs" /> 
+  <meta property="og:site_name" content="alpha360 v3.3 - 351 documentation " /> 
 
   <!-- Bootstrap core CSS -->
   <link href="vendors/bootstrap-3.4.1/css/bootstrap.min.css" rel="stylesheet"/>
@@ -43,7 +43,7 @@
     <![endif]-->
 
   <!-- JsTree styles -->
-  <link href="vendors/jstree-3.3.7/themes/default/style.min.css" rel="stylesheet"/>
+  <link href="vendors/jstree-3.3.10/themes/default/style.min.css" rel="stylesheet"/>
 
   <!-- Hnd styles -->
   <link href="css/layout.min.css" rel="stylesheet" />
@@ -74,11 +74,11 @@
       <span class="sr-only">Toggle navigation</span>
       <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
     </button>
-    <h1>alpha360 Docs</h1>
+    <h1>alpha360 v3.3 - 351 documentation </h1>
     
   </header>
 
-  <nav class="md-nav-expanded">
+  <nav id="panel-left" class="md-nav-expanded">
     <!-- Nav tabs -->
     <ul class="tab-tabs nav nav-tabs" role="tablist">
       <li id="nav-close"> 
@@ -170,10 +170,10 @@
             
                 <div class="navigation">
                     <ol class="breadcrumb">
-                        <li><a href="UniversalDataModel.html">Universal Data Model</a></li>
+                        <li><a href="alpha360UniversalDataModel.html">alpha360 Universal Data Model</a></li>
                     </ol>
                     <div class="nav-arrows">
-                        <div class="btn-group btn-group-xs" role="group"><a class="btn btn-default" href="UniversalDataModel.html" title="Universal Data Model" role="button"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></a><a class="btn btn-default" href="CRMEntities.html" title="CRM Entities" role="button"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a><a class="btn btn-default" href="BatchEntity.html" title="Batch Entity" role="button"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></div>
+                        <div class="btn-group btn-group" role="group"><a class="btn btn-default" href="alpha360UniversalDataModel.html" title="alpha360 Universal Data Model" role="button"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></a><a class="btn btn-default" href="PurchaseWorkflows.html" title="Purchase Workflows" role="button"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a><a class="btn btn-default" href="ChartofAccounts.html" title="Chart of Accounts" role="button"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></div>
                     </div>
                 </div> 
             
@@ -184,27 +184,22 @@
 
             <div class="main-content">
                 
-<p></p>
-<p class="rvps2"><span class="rvts11">The Accounting entities are a family of complex entities, used in the Accounting area.</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps2"><span class="rvts11">The Accounting entities are a family of simple and complex entities, used to support Accounting.</span></p>
+<p class="rvps2"><span class="rvts11">There are "dramatic" changes in Accounting in v3 (vs version 2) and everything has been re-designed so that developers can easily support their local legislation.</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps2"><span class="rvts21">The Accounting system in all alpha360 Business applications is a </span><span class="rvts22">double</span><span class="rvts21">-</span><span class="rvts22">entry system.</span></p>
+<p class="rvps2"><span class="rvts21">In&nbsp;</span><span class="rvts22">double</span><span class="rvts21">-</span><span class="rvts22">entry accounting</span><span class="rvts21">, a transaction always affects at least&nbsp;</span><span class="rvts22">2 chart of&nbsp;accounts</span><span class="rvts21">, includes at least one debit and one credit, and its total debits and total credits are equal.</span></p>
+<p class="rvps2"><span class="rvts21"><br/></span></p>
+<p class="rvps2"><span class="rvts12">Simple Diagram of the Accounting Entities</span></p>
+<p class="rvps2"><span class="rvts11">&nbsp;</span><img width="745" height="586" alt="" style="padding : 1px;" src="lib/a1.png"></p>
 <p class="rvps2"><span class="rvts11"><br/></span></p>
-<p class="rvps2"><span class="rvts11">At the heart of accounting is the aAccount table that stores the Chart of Accounts.</span></p>
-<p class="rvps2"><span class="rvts11">The aAccount has a "reflexive" structure, where each record points to its parent record.</span></p>
-<p class="rvps2"><span class="rvts11"><br/></span></p>
-<p class="rvps2"><span class="rvts11">In many accounting practices around the world there exists the idea of aAccount degrees _AND_ the sAccountID mask shows the structure of the Chart of Accounts.</span></p>
-<p class="rvps2"><span class="rvts11">Like account 10.10 has 10 as a parent and 10.10 is degree of 2 and 10 is degree of 1.</span></p>
-<p class="rvps2"><span class="rvts11"><br/></span></p>
-<p class="rvps2"><span class="rvts11">You can easily "simulate" the above with the design of the ChartOfAccounts used in the Universal Data Model.</span></p>
-<p class="rvps2"><span class="rvts11"><br/></span></p>
-<p class="rvps2"><span class="rvts11">Here is the full Accounting Diagram</span></p>
-<p class="rvps2"><span class="rvts11"><br/></span></p>
-<p class="rvps2"><span class="rvts11">&nbsp;</span><img alt="" style="padding : 1px;" src="lib/Accounting.png"></p>
-<p class="rvps2"><span class="rvts11"><br/></span></p>
-<p class="rvps2"><span class="rvts11"><br/></span></p>
-<p></p>
+<p class="rvps2"><span class="rvts6">* the above diagram is NOT complete - for more information see the database schema.</span></p>
+<p class="rvps2" style="page-break-before: always;"><span class="rvts6"></span><span class="rvts6"></span></p>
 
             </div>
             
-            <div id="topic_footer"><div id="topic_footer_content">Copyright &copy; 2020 by computerplus. All Rights Reserved.</div></div>
+            <div id="topic_footer"><div id="topic_footer_content">Copyright &copy; 2023 by computerplus. All Rights Reserved.</div></div>
         </div>  <!-- /#topic-content -->
     </article>
 
@@ -231,29 +226,28 @@
     </div>
   </div>
 
-  <!-- Scripts -->
-  <script src="vendors/jquery-3.4.1/jquery.min.js"></script>
-  <script src="vendors/bootstrap-3.4.1/js/bootstrap.min.js"></script>
-  <script src="vendors/markjs-8.11.1/jquery.mark.min.js"></script>
-  <script src="vendors/uri-1.19.1/uri.min.js"></script>
-  <script src="vendors/imageMapResizer-1.0.7/imageMapResizer.min.js"></script>
-  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-  <script src="vendors/bootstrap-3.4.1/js/ie10-viewport-bug-workaround.js"></script>
-  
-  <!-- Headroom -->
-  <script src="vendors/headroom-0.9.4/headroom.min.js"></script>
-  <script src="vendors/headroom-0.9.4/jquery.headroom.min.js"></script>
+  <!-- Splitter -->
+  <div id="hnd-splitter" style="left: 350px"></div>  
 
-  <!-- JsTree -->
-  <script src="vendors/jstree-3.3.7/jstree.min.js"></script>
+  <!-- Scripts -->
+  <script src="vendors/jquery-3.5.1/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+  <script src="vendors/bootstrap-3.4.1/js/ie10-viewport-bug-workaround.js"></script>
+  <script src="vendors/markjs-8.11.1/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.19.2/uri.min.js"></script>
+  <script src="vendors/imageMapResizer-1.0.10/imageMapResizer.min.js"></script>
+  <script src="vendors/headroom-0.11.0/headroom.min.js"></script>
+  <script src="vendors/jstree-3.3.10/jstree.min.js"></script>  
+  <script src="vendors/interactjs-1.9.22/interact.min.js"></script>  
 
   <!-- HelpNDoc scripts -->
+  <script src="js/polyfill.object.min.js"></script>
   <script src="_translations.js"></script>
   <script src="js/hndsd.min.js"></script>
   <script src="js/hndse.min.js"></script>
   <script src="js/app.min.js"></script>
 
-  <!-- Scripts -->
+  <!-- Init script -->
   <script>
     $(function() {
       // Create the app
